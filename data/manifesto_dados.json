@@ -1,0 +1,12 @@
+{
+  "grupo": "G01",
+  "seed_base": 0,
+  "seed_final": 1001,
+  "id_instancia": "G01_2026_01",
+  "arquivos": [
+    "q1_catalogo_G01.csv",
+    "q1_config_G01.json",
+    "q2_catalogo_G01.csv",
+    "q2_config_G01.json"
+  ]
+}
