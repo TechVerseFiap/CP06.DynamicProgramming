@@ -1,0 +1,239 @@
+{
+  "benchmark": {
+    "sku_count": 6,
+    "brute_force_cash": 7397.89,
+    "brute_force_policy": [
+      {
+        "sku": "Q1-001",
+        "multiplier": 1.1,
+        "price": 132.0,
+        "units": 18,
+        "unit_margin": 50.8,
+        "cash": 914.4,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-002",
+        "multiplier": 1.1,
+        "price": 99.0,
+        "units": 25,
+        "unit_margin": 39.08,
+        "cash": 977.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-003",
+        "multiplier": 1.1,
+        "price": 330.0,
+        "units": 12,
+        "unit_margin": 120.4,
+        "cash": 1444.8,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-004",
+        "multiplier": 1.1,
+        "price": 82.5,
+        "units": 40,
+        "unit_margin": 34.08,
+        "cash": 1363.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-005",
+        "multiplier": 1.1,
+        "price": 231.0,
+        "units": 16,
+        "unit_margin": 86.59,
+        "cash": 1385.44,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-006",
+        "multiplier": 1.1,
+        "price": 60.5,
+        "units": 50,
+        "unit_margin": 26.27,
+        "cash": 1313.25,
+        "remaining_stock": 0
+      }
+    ],
+    "ga_cash": 7397.89,
+    "ga_policy": [
+      {
+        "sku": "Q1-001",
+        "multiplier": 1.1,
+        "price": 132.0,
+        "units": 18,
+        "unit_margin": 50.8,
+        "cash": 914.4,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-002",
+        "multiplier": 1.1,
+        "price": 99.0,
+        "units": 25,
+        "unit_margin": 39.08,
+        "cash": 977.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-003",
+        "multiplier": 1.1,
+        "price": 330.0,
+        "units": 12,
+        "unit_margin": 120.4,
+        "cash": 1444.8,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-004",
+        "multiplier": 1.1,
+        "price": 82.5,
+        "units": 40,
+        "unit_margin": 34.08,
+        "cash": 1363.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-005",
+        "multiplier": 1.1,
+        "price": 231.0,
+        "units": 16,
+        "unit_margin": 86.59,
+        "cash": 1385.44,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-006",
+        "multiplier": 1.1,
+        "price": 60.5,
+        "units": 50,
+        "unit_margin": 26.27,
+        "cash": 1313.25,
+        "remaining_stock": 0
+      }
+    ],
+    "ga_gap_percent": 0.0
+  },
+  "full_catalog_ga": {
+    "cash": 7397.89,
+    "policy": [
+      {
+        "sku": "Q1-001",
+        "multiplier": 1.1,
+        "price": 132.0,
+        "units": 18,
+        "unit_margin": 50.8,
+        "cash": 914.4,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-002",
+        "multiplier": 1.1,
+        "price": 99.0,
+        "units": 25,
+        "unit_margin": 39.08,
+        "cash": 977.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-003",
+        "multiplier": 1.1,
+        "price": 330.0,
+        "units": 12,
+        "unit_margin": 120.4,
+        "cash": 1444.8,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-004",
+        "multiplier": 1.1,
+        "price": 82.5,
+        "units": 40,
+        "unit_margin": 34.08,
+        "cash": 1363.0,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-005",
+        "multiplier": 1.1,
+        "price": 231.0,
+        "units": 16,
+        "unit_margin": 86.59,
+        "cash": 1385.44,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-006",
+        "multiplier": 1.1,
+        "price": 60.5,
+        "units": 50,
+        "unit_margin": 26.27,
+        "cash": 1313.25,
+        "remaining_stock": 0
+      }
+    ],
+    "fitness_history": [
+      6044.02,
+      6183.78,
+      6542.88,
+      6542.88,
+      6834.48,
+      6834.48,
+      6970.98,
+      6970.98,
+      6970.98,
+      6970.98,
+      7120.49,
+      7120.49,
+      7120.49,
+      7248.37,
+      7248.37,
+      7248.37,
+      7248.37,
+      7248.37,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89,
+      7397.89
+    ]
+  },
+  "greedy_promotion": {
+    "spent": 0.0,
+    "remaining_budget": 250.0,
+    "allocations": []
+  },
+  "sample_data_notice": "Illustrative sample catalog; replace with official generated inputs.",
+  "seed": 14
+}

@@ -2,29 +2,22 @@ from __future__ import annotations
 
 from itertools import product
 
+try:
+    from .metrics import evaluate_policy
+except ImportError:  # Supports running main.py directly from the question folder.
+    from metrics import evaluate_policy
+
 
 def brute_force_q1(itens, price_levels, margem_minima):
-    """Resolve exatamente um subconjunto pequeno por força bruta."""
-    melhor = 0.0
-    melhor_decisao = []
+    """Find the exact best policy by enumerating every price combination."""
+    if not price_levels:
+        raise ValueError("At least one permitted price multiplier is required")
 
-    for escolha in product(price_levels, repeat=len(itens)):
-        caixa_total = 0.0
-        decisao = []
+    best_cash = 0.0
+    best_policy = []
+    for choice in product(price_levels, repeat=len(itens)):
+        cash, policy = evaluate_policy(itens, choice, margem_minima)
+        if cash > best_cash:
+            best_cash, best_policy = cash, policy
 
-        for item, mult in zip(itens, escolha):
-            preco = item["preco_atual"] * mult
-            demanda = min(item["estoque"], max(0, int(item["demanda_base_90d"] * (mult ** (-item["elasticidade"])))) )
-            margem = preco * (1 - item["taxa_marketplace"]) - item["custo_unitario"] - item["custo_logistico"]
-            if demanda <= 0 or margem <= 0 or margem < item["preco_atual"] * margem_minima:
-                caixa = 0.0
-            else:
-                caixa = demanda * margem
-            caixa_total += caixa
-            decisao.append((item["sku"], preco, demanda))
-
-        if caixa_total > melhor:
-            melhor = caixa_total
-            melhor_decisao = decisao
-
-    return melhor, melhor_decisao
+    return best_cash, best_policy

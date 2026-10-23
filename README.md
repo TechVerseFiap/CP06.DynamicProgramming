@@ -1,70 +1,52 @@
-# Checkpoint 6 — Dynamic Programming
+# Checkpoint 6 - Dynamic Programming
 
-## Grupo
-Grupo: G01
+## Group and instance
 
-Integrantes:
-- Davi Marques de Andrade Munhoz — RM 566223
-- Diogo Oliveira Lima — RM 562559
-- Leandro Simoneli da Silva — RM 566539
-- Lucas dos Reis Aquino — RM 562414
-- Lucas Perez Bonato — RM 565356
+- Group: G01
+- Members: Davi Marques de Andrade Munhoz (RM 566223), Diogo Oliveira Lima
+  (RM 562559), Leandro Simoneli da Silva (RM 566539), Lucas dos Reis Aquino
+  (RM 562414), and Lucas Perez Bonato (RM 565356)
+- Seed base: 0
+- Seed final: 1001
+- Instance ID: G01_2026_01
 
-## Seed base
-Seed base: 0
+> **Data status:** the repository currently uses illustrative sample catalogs.
+> They are not the official group-generated inputs. Do not submit their numeric
+> results as official until the generator notebook and official CSV/config files
+> are restored and wired into the programs.
 
-## Seed final
-Seed final: 1001
+## Environment
 
-## ID da instância
-ID da instância: G01_2026_01
+Python 3.10 or newer is recommended. Install dependencies with:
 
-## Estrutura do repositório
-
-```text
-avaliacao-varejo-grupo01/
-├── README.md
-├── requirements.txt
-├── IA_USO.md
-├── data/
-│   ├── instancia_grupo01.csv
-│   └── manifesto_dados.json
-├── questao_01/
-│   ├── brute_force.py
-│   ├── genetic_algorithm.py
-│   ├── greedy.py
-│   ├── main.py
-│   └── resultados/
-├── questao_02/
-│   ├── monte_carlo.py
-│   ├── dynamic_programming.py
-│   ├── greedy.py
-│   ├── main.py
-│   └── resultados/
-├── tests/
-├── docs/
-│   ├── arquitetura.png
-│   ├── complexidade.md
-│   ├── desempenho.md
-│   └── decisoes.md
-└── .gitignore
-```
-
-## Objetivo
-Este repositório implementa a solução de duas questões de Dynamic Programming para a avaliação de precificação online de varejo, com foco em:
-- maximização de caixa;
-- controle de margem;
-- gestão de estoques;
-- planejamento semanal sob incerteza.
-
-## Execução rápida
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
 python -m pip install -r requirements.txt
-python questao_01/main.py --modo completo
-python questao_02/main.py --seed 14 --cenarios 5000
 ```
 
-## Observação
-As duas soluções usam modelagem de programação dinâmica, com validação por exemplos e casos limites. O código foi organizado para manter o fluxo de algoritmos em cada questão e permitir reprodução dos resultados.
+## Question 1 sample run
+
+```bash
+python questao_01/main.py --seed 14 --orcamento-promocional 250
+```
+
+The command runs the six-SKU Brute Force benchmark, the seeded GA on that
+benchmark and the available catalog, then passes the GA price policy to Greedy.
+It writes `questao_01/resultados/resultado_q1.json`, including the policies,
+benchmark gap, GA fitness history, and promotion allocations. The sample uses an
+illustrative 10% demand uplift and logistics cost as the per-unit incentive cost.
+
+## Tests
+
+```bash
+python -m unittest discover -s tests -p "test_q1.py" -v
+```
+
+The existing Question 2 implementation remains a prototype; its sample command
+is `python questao_02/main.py --seed 14 --cenarios 5000`. See `docs/decisoes.md`
+and `docs/complexidade.md` for current limitations and complexity assumptions.
+
+## Official instance status
+
+The current `data/manifesto_dados.json` does not yet contain the official input
+hashes. Recover the generator and generated files, then verify and record hashes
+before using numeric results as official submission evidence.
