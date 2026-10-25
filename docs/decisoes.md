@@ -17,8 +17,20 @@ arquivos oficiais de entrada ainda precisam ser recuperados. O uplift promociona
 de 10% e o custo por unidade baseado no custo logistico sao hipoteses explicitas
 do prototipo, nao dados oficiais.
 
-## Questao 2
+## Questao 2: fluxo implementado no prototipo
 
-A implementacao atual ainda e um prototipo. A integracao Monte Carlo -> DP ->
-Greedy -> validacao independente esta pendente; consultar o PDF da avaliacao
-antes de interpretar os resultados existentes.
+1. Monte Carlo estima demanda e margem semanal por SKU e multiplicador, com
+   variacoes de demanda, preco do concorrente e custo logistico.
+2. A DP consome essas estimativas e reconstrui uma politica semanal por SKU,
+   usando semana e estoque restante como estado.
+3. O Greedy recebe a trajetoria da DP e escolhe incentivos semanais por caixa
+   incremental estimado por real, respeitando o orcamento da semana.
+4. A politica final e reavaliada com um RNG e seed separados, em pelo menos
+   5.000 cenarios por padrao. A validacao reporta probabilidade de pagamento
+   nos marcos da divida, caixa esperado, P10, estoque final e exemplos de falha.
+
+O catalogo, uplift promocional, custos de incentivo e valores das dividas usados
+na CLI ainda sao ilustrativos. A avaliacao Monte Carlo e a DP usam estimativas
+medias e nao uma DP de probabilidade de pagamento; resultados nao sao oficiais
+ate que os dados/configuracoes do grupo sejam carregados e os alvos financeiros
+sejam confirmados.

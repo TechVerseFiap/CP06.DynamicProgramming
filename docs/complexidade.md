@@ -17,14 +17,19 @@ O Greedy escala por SKU, mas sua qualidade depende das hipoteses de uplift e
 custo promocional. Essas hipoteses ainda precisam ser substituidas pelos dados
 oficiais do grupo.
 
-## Questao 2 (prototipo; analise preliminar)
+## Questao 2 (prototipo)
 
-- Monte Carlo: O(C * F), onde `C` e o numero de cenarios e `F` o numero de
-  fatores simulados; memoria O(C) na implementacao atual porque guarda todos os
-  resultados.
-- Programacao Dinamica: O(W * S * P), onde `W` e semanas, `S` e estoque maximo,
-  e `P` e precos permitidos; memoria O(W * S).
-- Greedy: O(N log N) no numero `N` de itens, devido a ordenacao.
+Definicoes: `N` = SKUs, `W` = semanas, `S` = estoque maximo por SKU, `P` =
+multiplicadores de preco, `C` = cenarios Monte Carlo.
 
-As formulas e evidencias de desempenho da Questao 2 ainda precisam ser revistas
-apos a integracao e medicao da validacao Monte Carlo exigida pela avaliacao.
+| Algoritmo | Tempo | Memoria auxiliar | Trecho dominante |
+|---|---:|---:|---|
+| Monte Carlo estimacao | O(N * W * P * C) | O(N * W * P) | Simulacao por SKU, semana, preco e cenario. |
+| DP por SKU | O(N * W * S * P) | O(W * S + N * W) | Avaliacao de cada decisao em cada estado semana/estoque. |
+| Greedy semanal | O(W * N log N) | O(W * N) | Ordenacao dos candidatos dentro de cada semana. |
+| MC validacao | O(C * W * N) | O(C + W * N) | Simulacao independente da politica completa; armazena caixa final por cenario. |
+
+As estimativas ainda sao independentes por preco e o objetivo da DP maximiza
+caixa esperado, nao a probabilidade de quitar a divida. As medidas reais de
+tempo/memoria, comparacoes entre tamanhos e limites de viabilidade continuam
+pendentes.
