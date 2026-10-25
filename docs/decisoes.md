@@ -12,10 +12,10 @@
 5. A implementacao do GA usa um gerador aleatorio local, seed configuravel,
    elitismo e historico de fitness por geracao.
 
-O catalogo presente em `questao_01/main.py` e apenas ilustrativo: o notebook e os
-arquivos oficiais de entrada ainda precisam ser recuperados. O uplift promocional
-de 10% e o custo por unidade baseado no custo logistico sao hipoteses explicitas
-do prototipo, nao dados oficiais.
+O catalogo Q1 e carregado dos arquivos oficiais gerados pelo notebook e so e
+aceito depois da validacao SHA-256. O uplift promocional de 10% e o custo por
+unidade baseado no custo logistico sao hipoteses do modelo, nao parametros
+fornecidos pelo gerador; devem ser justificados na defesa.
 
 ## Questao 2: fluxo implementado no prototipo
 
@@ -29,8 +29,8 @@ do prototipo, nao dados oficiais.
    5.000 cenarios por padrao. A validacao reporta probabilidade de pagamento
    nos marcos da divida, caixa esperado, P10, estoque final e exemplos de falha.
 
-O catalogo, uplift promocional, custos de incentivo e valores das dividas usados
-na CLI ainda sao ilustrativos. A avaliacao Monte Carlo e a DP usam estimativas
-medias e nao uma DP de probabilidade de pagamento; resultados nao sao oficiais
-ate que os dados/configuracoes do grupo sejam carregados e os alvos financeiros
-sejam confirmados.
+O catalogo e os valores de divida/caixa agora vem dos arquivos oficiais gerados
+para G01, validados por SHA-256. As variabilidades usadas pelo Monte Carlo tambem
+vem do config oficial. O uplift promocional de 10% e o custo por unidade baseado
+no custo logistico seguem sendo hipoteses do modelo. A DP maximiza caixa esperado,
+nao diretamente a probabilidade de pagamento; esse limite deve ser explicitado.

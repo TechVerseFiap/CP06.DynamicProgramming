@@ -3,7 +3,23 @@ from __future__ import annotations
 import random
 
 
-def monte_carlo_q2(items, price_levels, scenarios=2000, seed=14, weeks=12):
+DEFAULT_VARIABILITY = {
+    "sigma_demanda": 0.12,
+    "sigma_preco_concorrente": 0.06,
+    "sigma_custo_logistico": 0.10,
+}
+
+
+def _variability_values(variabilities):
+    values = {**DEFAULT_VARIABILITY, **(variabilities or {})}
+    if any(value < 0 for value in values.values()):
+        raise ValueError("Scenario standard deviations cannot be negative")
+    return values
+
+
+def monte_carlo_q2(
+    items, price_levels, scenarios=2000, seed=14, weeks=12, variabilities=None
+):
     """Estimate weekly demand and unit contribution for each SKU/price.
 
     Demand, competitor-price movement, and logistics cost are independently
@@ -17,6 +33,7 @@ def monte_carlo_q2(items, price_levels, scenarios=2000, seed=14, weeks=12):
         raise ValueError("price_levels must contain positive multipliers")
 
     rng = random.Random(seed)
+    variability = _variability_values(variabilities)
     estimates = {}
     for item in items:
         for multiplier in price_levels:
@@ -25,14 +42,22 @@ def monte_carlo_q2(items, price_levels, scenarios=2000, seed=14, weeks=12):
                 demand_total = 0.0
                 margin_total = 0.0
                 for _ in range(scenarios):
-                    demand_factor = rng.uniform(0.90, 1.10)
-                    competitor_factor = rng.uniform(0.92, 1.08)
-                    logistics_factor = rng.uniform(0.95, 1.15)
+                    demand_factor = max(0.0, rng.gauss(1.0, variability["sigma_demanda"]))
+                    competitor_factor = max(
+                        0.01, rng.gauss(1.0, variability["sigma_preco_concorrente"])
+                    )
+                    logistics_factor = max(
+                        0.01, rng.gauss(1.0, variability["sigma_custo_logistico"])
+                    )
+                    competitor_baseline = (
+                        item.get("preco_concorrente_base", item["preco_atual"])
+                        / item["preco_atual"]
+                    )
                     demand = (
                         item["demanda_base_semanal"]
                         * multiplier ** (-item["elasticidade"])
                         * demand_factor
-                        * competitor_factor ** item["elasticidade"]
+                        * (competitor_baseline * competitor_factor) ** item["elasticidade"]
                     )
                     unit_margin = (
                         price * (1 - item["taxa_marketplace"])
@@ -56,12 +81,15 @@ def validate_q2_policy(
     debt_schedule,
     scenarios=5000,
     seed=5014,
+    initial_cash=0.0,
+    variabilities=None,
 ):
     """Validate a completed policy on independent scenarios and debt dates."""
     if scenarios < 1:
         raise ValueError("scenarios must be at least 1")
 
     rng = random.Random(seed)
+    variability = _variability_values(variabilities)
     items_by_sku = {item["sku"]: item for item in items}
     decisions = {
         (week["week"], entry["sku"]): entry
@@ -81,7 +109,7 @@ def validate_q2_policy(
 
     for scenario in range(scenarios):
         stocks = {sku: item["estoque_inicial"] for sku, item in items_by_sku.items()}
-        cumulative_cash = 0.0
+        cumulative_cash = initial_cash
         total_debt_due = 0.0
         scenario_failures = []
 
@@ -93,15 +121,23 @@ def validate_q2_policy(
                     continue
 
                 multiplier = decision["multiplier"]
-                demand_factor = rng.uniform(0.90, 1.10)
-                competitor_factor = rng.uniform(0.92, 1.08)
-                logistics_factor = rng.uniform(0.95, 1.15)
+                demand_factor = max(0.0, rng.gauss(1.0, variability["sigma_demanda"]))
+                competitor_factor = max(
+                    0.01, rng.gauss(1.0, variability["sigma_preco_concorrente"])
+                )
+                logistics_factor = max(
+                    0.01, rng.gauss(1.0, variability["sigma_custo_logistico"])
+                )
+                competitor_baseline = (
+                    item.get("preco_concorrente_base", item["preco_atual"])
+                    / item["preco_atual"]
+                )
                 uplift = 1.10 if (week, sku) in promotion_costs else 1.0
                 demand = (
                     item["demanda_base_semanal"]
                     * multiplier ** (-item["elasticidade"])
                     * demand_factor
-                    * competitor_factor ** item["elasticidade"]
+                    * (competitor_baseline * competitor_factor) ** item["elasticidade"]
                     * uplift
                 )
                 units = min(stocks[sku], max(0, int(demand)))

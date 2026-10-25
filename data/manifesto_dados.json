@@ -1,12 +1,15 @@
 {
   "grupo": "G01",
-  "seed_base": 0,
-  "seed_final": 1001,
-  "id_instancia": "G01_2026_01",
-  "arquivos": [
-    "q1_catalogo_G01.csv",
-    "q1_config_G01.json",
-    "q2_catalogo_G01.csv",
-    "q2_config_G01.json"
-  ]
+  "quantidade_integrantes": 5,
+  "seed_base": 31,
+  "seed_final": 1031,
+  "id_instancia": "ec52f3b45b22",
+  "arquivos": {
+    "q1_catalogo_G01.csv": "6e2f25480fbbc07b2274a6461045f83567bc20e1703b11ef34dd0ad4e67eedac",
+    "q1_config_G01.json": "6c3d3650bc995f20ca9621710940cb0497d0bb60cb055b00781f5a621be49a1b",
+    "q2_catalogo_G01.csv": "5a88586e32c1327e0adab3c698a57de5ad881ef14d4ec17cc2e32a7dfe0cbea3",
+    "q2_config_G01.json": "084ed595a020ac78735703acc3458b32b0998594a73ec868742d2da65cc5d7e5"
+  },
+  "sha256_conjunto": "ec52f3b45b22ad5fe2d5160f6776dd75978b02c007af72177aa5c97792d382a3",
+  "aviso": "Os arquivos originais devem ser preservados. Qualquer alteração modificará o hash."
 }

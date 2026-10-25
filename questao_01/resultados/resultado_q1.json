@@ -1,239 +1,635 @@
 {
   "benchmark": {
     "sku_count": 6,
-    "brute_force_cash": 7397.89,
+    "brute_force_cash": 57345.99,
     "brute_force_policy": [
       {
         "sku": "Q1-001",
         "multiplier": 1.1,
-        "price": 132.0,
-        "units": 18,
-        "unit_margin": 50.8,
-        "cash": 914.4,
+        "price": 54.89,
+        "units": 119,
+        "unit_margin": 14.25,
+        "cash": 1695.85,
         "remaining_stock": 0
       },
       {
         "sku": "Q1-002",
         "multiplier": 1.1,
-        "price": 99.0,
-        "units": 25,
-        "unit_margin": 39.08,
-        "cash": 977.0,
-        "remaining_stock": 0
+        "price": 852.39,
+        "units": 13,
+        "unit_margin": 164.33,
+        "cash": 2136.23,
+        "remaining_stock": 12
       },
       {
         "sku": "Q1-003",
         "multiplier": 1.1,
-        "price": 330.0,
-        "units": 12,
-        "unit_margin": 120.4,
-        "cash": 1444.8,
-        "remaining_stock": 0
+        "price": 2831.29,
+        "units": 54,
+        "unit_margin": 291.87,
+        "cash": 15760.77,
+        "remaining_stock": 29
       },
       {
         "sku": "Q1-004",
-        "multiplier": 1.1,
-        "price": 82.5,
-        "units": 40,
-        "unit_margin": 34.08,
-        "cash": 1363.0,
-        "remaining_stock": 0
+        "multiplier": 0.8,
+        "price": 731.92,
+        "units": 0,
+        "unit_margin": -195.91,
+        "cash": 0.0,
+        "remaining_stock": 45
       },
       {
         "sku": "Q1-005",
         "multiplier": 1.1,
-        "price": 231.0,
-        "units": 16,
-        "unit_margin": 86.59,
-        "cash": 1385.44,
-        "remaining_stock": 0
+        "price": 2510.09,
+        "units": 41,
+        "unit_margin": 422.48,
+        "cash": 17321.88,
+        "remaining_stock": 39
       },
       {
         "sku": "Q1-006",
         "multiplier": 1.1,
-        "price": 60.5,
-        "units": 50,
-        "unit_margin": 26.27,
-        "cash": 1313.25,
-        "remaining_stock": 0
+        "price": 658.79,
+        "units": 107,
+        "unit_margin": 190.95,
+        "cash": 20431.26,
+        "remaining_stock": 46
       }
     ],
-    "ga_cash": 7397.89,
+    "ga_cash": 57345.99,
     "ga_policy": [
       {
         "sku": "Q1-001",
         "multiplier": 1.1,
-        "price": 132.0,
-        "units": 18,
-        "unit_margin": 50.8,
-        "cash": 914.4,
+        "price": 54.89,
+        "units": 119,
+        "unit_margin": 14.25,
+        "cash": 1695.85,
         "remaining_stock": 0
       },
       {
         "sku": "Q1-002",
         "multiplier": 1.1,
-        "price": 99.0,
-        "units": 25,
-        "unit_margin": 39.08,
-        "cash": 977.0,
-        "remaining_stock": 0
+        "price": 852.39,
+        "units": 13,
+        "unit_margin": 164.33,
+        "cash": 2136.23,
+        "remaining_stock": 12
       },
       {
         "sku": "Q1-003",
         "multiplier": 1.1,
-        "price": 330.0,
-        "units": 12,
-        "unit_margin": 120.4,
-        "cash": 1444.8,
-        "remaining_stock": 0
+        "price": 2831.29,
+        "units": 54,
+        "unit_margin": 291.87,
+        "cash": 15760.77,
+        "remaining_stock": 29
       },
       {
         "sku": "Q1-004",
-        "multiplier": 1.1,
-        "price": 82.5,
-        "units": 40,
-        "unit_margin": 34.08,
-        "cash": 1363.0,
-        "remaining_stock": 0
+        "multiplier": 0.8,
+        "price": 731.92,
+        "units": 0,
+        "unit_margin": -195.91,
+        "cash": 0.0,
+        "remaining_stock": 45
       },
       {
         "sku": "Q1-005",
         "multiplier": 1.1,
-        "price": 231.0,
-        "units": 16,
-        "unit_margin": 86.59,
-        "cash": 1385.44,
-        "remaining_stock": 0
+        "price": 2510.09,
+        "units": 41,
+        "unit_margin": 422.48,
+        "cash": 17321.88,
+        "remaining_stock": 39
       },
       {
         "sku": "Q1-006",
         "multiplier": 1.1,
-        "price": 60.5,
-        "units": 50,
-        "unit_margin": 26.27,
-        "cash": 1313.25,
-        "remaining_stock": 0
+        "price": 658.79,
+        "units": 107,
+        "unit_margin": 190.95,
+        "cash": 20431.26,
+        "remaining_stock": 46
       }
     ],
     "ga_gap_percent": 0.0
   },
   "full_catalog_ga": {
-    "cash": 7397.89,
+    "cash": 698348.27,
     "policy": [
       {
         "sku": "Q1-001",
-        "multiplier": 1.1,
-        "price": 132.0,
-        "units": 18,
-        "unit_margin": 50.8,
-        "cash": 914.4,
+        "multiplier": 0.95,
+        "price": 47.4,
+        "units": 119,
+        "unit_margin": 7.4,
+        "cash": 880.58,
         "remaining_stock": 0
       },
       {
         "sku": "Q1-002",
-        "multiplier": 1.1,
-        "price": 99.0,
-        "units": 25,
-        "unit_margin": 39.08,
-        "cash": 977.0,
-        "remaining_stock": 0
+        "multiplier": 1.05,
+        "price": 813.64,
+        "units": 15,
+        "unit_margin": 129.78,
+        "cash": 1946.77,
+        "remaining_stock": 10
       },
       {
         "sku": "Q1-003",
         "multiplier": 1.1,
-        "price": 330.0,
-        "units": 12,
-        "unit_margin": 120.4,
-        "cash": 1444.8,
-        "remaining_stock": 0
+        "price": 2831.29,
+        "units": 54,
+        "unit_margin": 291.87,
+        "cash": 15760.77,
+        "remaining_stock": 29
       },
       {
         "sku": "Q1-004",
         "multiplier": 1.1,
-        "price": 82.5,
-        "units": 40,
-        "unit_margin": 34.08,
-        "cash": 1363.0,
-        "remaining_stock": 0
+        "price": 1006.39,
+        "units": 0,
+        "unit_margin": 36.48,
+        "cash": 0.0,
+        "remaining_stock": 45
       },
       {
         "sku": "Q1-005",
         "multiplier": 1.1,
-        "price": 231.0,
-        "units": 16,
-        "unit_margin": 86.59,
-        "cash": 1385.44,
-        "remaining_stock": 0
+        "price": 2510.09,
+        "units": 41,
+        "unit_margin": 422.48,
+        "cash": 17321.88,
+        "remaining_stock": 39
       },
       {
         "sku": "Q1-006",
+        "multiplier": 1.05,
+        "price": 628.85,
+        "units": 114,
+        "unit_margin": 163.48,
+        "cash": 18637.15,
+        "remaining_stock": 39
+      },
+      {
+        "sku": "Q1-007",
+        "multiplier": 1.0,
+        "price": 1883.9,
+        "units": 0,
+        "unit_margin": -63.34,
+        "cash": 0.0,
+        "remaining_stock": 128
+      },
+      {
+        "sku": "Q1-008",
         "multiplier": 1.1,
-        "price": 60.5,
-        "units": 50,
-        "unit_margin": 26.27,
-        "cash": 1313.25,
+        "price": 2292.29,
+        "units": 54,
+        "unit_margin": 348.01,
+        "cash": 18792.46,
+        "remaining_stock": 23
+      },
+      {
+        "sku": "Q1-009",
+        "multiplier": 1.1,
+        "price": 3709.09,
+        "units": 82,
+        "unit_margin": 359.31,
+        "cash": 29463.58,
+        "remaining_stock": 6
+      },
+      {
+        "sku": "Q1-010",
+        "multiplier": 1.05,
+        "price": 1064.6,
+        "units": 56,
+        "unit_margin": 173.62,
+        "cash": 9722.75,
+        "remaining_stock": 43
+      },
+      {
+        "sku": "Q1-011",
+        "multiplier": 1.1,
+        "price": 1451.89,
+        "units": 93,
+        "unit_margin": 153.05,
+        "cash": 14234.03,
         "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-012",
+        "multiplier": 1.1,
+        "price": 83.49,
+        "units": 320,
+        "unit_margin": 26.09,
+        "cash": 8349.53,
+        "remaining_stock": 4
+      },
+      {
+        "sku": "Q1-013",
+        "multiplier": 1.1,
+        "price": 299.09,
+        "units": 326,
+        "unit_margin": 137.37,
+        "cash": 44783.95,
+        "remaining_stock": 92
+      },
+      {
+        "sku": "Q1-014",
+        "multiplier": 1.1,
+        "price": 834.79,
+        "units": 42,
+        "unit_margin": 87.42,
+        "cash": 3671.71,
+        "remaining_stock": 14
+      },
+      {
+        "sku": "Q1-015",
+        "multiplier": 1.1,
+        "price": 372.79,
+        "units": 220,
+        "unit_margin": 124.51,
+        "cash": 27391.37,
+        "remaining_stock": 124
+      },
+      {
+        "sku": "Q1-016",
+        "multiplier": 1.1,
+        "price": 1848.99,
+        "units": 27,
+        "unit_margin": 183.21,
+        "cash": 4946.68,
+        "remaining_stock": 33
+      },
+      {
+        "sku": "Q1-017",
+        "multiplier": 1.0,
+        "price": 315.9,
+        "units": 79,
+        "unit_margin": 137.57,
+        "cash": 10868.34,
+        "remaining_stock": 20
+      },
+      {
+        "sku": "Q1-018",
+        "multiplier": 1.05,
+        "price": 582.64,
+        "units": 147,
+        "unit_margin": 178.14,
+        "cash": 26186.86,
+        "remaining_stock": 177
+      },
+      {
+        "sku": "Q1-019",
+        "multiplier": 1.1,
+        "price": 3024.89,
+        "units": 95,
+        "unit_margin": 860.5,
+        "cash": 81747.44,
+        "remaining_stock": 25
+      },
+      {
+        "sku": "Q1-020",
+        "multiplier": 1.1,
+        "price": 929.39,
+        "units": 32,
+        "unit_margin": 207.41,
+        "cash": 6637.18,
+        "remaining_stock": 3
+      },
+      {
+        "sku": "Q1-021",
+        "multiplier": 1.1,
+        "price": 2166.89,
+        "units": 78,
+        "unit_margin": 239.43,
+        "cash": 18675.69,
+        "remaining_stock": 29
+      },
+      {
+        "sku": "Q1-022",
+        "multiplier": 1.05,
+        "price": 510.19,
+        "units": 94,
+        "unit_margin": 224.96,
+        "cash": 21146.48,
+        "remaining_stock": 126
+      },
+      {
+        "sku": "Q1-023",
+        "multiplier": 1.1,
+        "price": 472.89,
+        "units": 151,
+        "unit_margin": 229.86,
+        "cash": 34709.05,
+        "remaining_stock": 5
+      },
+      {
+        "sku": "Q1-024",
+        "multiplier": 1.1,
+        "price": 60.39,
+        "units": 119,
+        "unit_margin": 20.25,
+        "cash": 2409.96,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-025",
+        "multiplier": 1.1,
+        "price": 1025.09,
+        "units": 44,
+        "unit_margin": 234.26,
+        "cash": 10307.32,
+        "remaining_stock": 61
+      },
+      {
+        "sku": "Q1-026",
+        "multiplier": 1.1,
+        "price": 2438.59,
+        "units": 74,
+        "unit_margin": 426.68,
+        "cash": 31574.17,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-027",
+        "multiplier": 1.1,
+        "price": 3680.49,
+        "units": 96,
+        "unit_margin": 811.45,
+        "cash": 77899.29,
+        "remaining_stock": 0
+      },
+      {
+        "sku": "Q1-028",
+        "multiplier": 1.1,
+        "price": 134.09,
+        "units": 148,
+        "unit_margin": 55.13,
+        "cash": 8159.45,
+        "remaining_stock": 181
+      },
+      {
+        "sku": "Q1-029",
+        "multiplier": 1.1,
+        "price": 3662.89,
+        "units": 71,
+        "unit_margin": 812.97,
+        "cash": 57720.95,
+        "remaining_stock": 1
+      },
+      {
+        "sku": "Q1-030",
+        "multiplier": 1.1,
+        "price": 439.89,
+        "units": 432,
+        "unit_margin": 218.53,
+        "cash": 94402.87,
+        "remaining_stock": 129
       }
     ],
     "fitness_history": [
-      6044.02,
-      6183.78,
-      6542.88,
-      6542.88,
-      6834.48,
-      6834.48,
-      6970.98,
-      6970.98,
-      6970.98,
-      6970.98,
-      7120.49,
-      7120.49,
-      7120.49,
-      7248.37,
-      7248.37,
-      7248.37,
-      7248.37,
-      7248.37,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89,
-      7397.89
+      488498.8,
+      529286.72,
+      543215.3,
+      558889.67,
+      576483.45,
+      614089.1,
+      614089.1,
+      626708.2,
+      630198.18,
+      630198.18,
+      644460.59,
+      662962.79,
+      667488.08,
+      667488.08,
+      667488.08,
+      672742.47,
+      672742.47,
+      672742.47,
+      676260.12,
+      676260.12,
+      676260.12,
+      676260.12,
+      676260.12,
+      683063.25,
+      683063.25,
+      683063.25,
+      683063.25,
+      683063.25,
+      683063.25,
+      683063.25,
+      684306.55,
+      684306.55,
+      684306.55,
+      690296.88,
+      690296.88,
+      690296.88,
+      690296.88,
+      690296.88,
+      691663.17,
+      694296.22,
+      694296.22,
+      694296.22,
+      696208.07,
+      696208.07,
+      696263.07,
+      696263.07,
+      698217.96,
+      698217.96,
+      698217.96,
+      698217.96,
+      698348.27
     ]
   },
   "greedy_promotion": {
-    "spent": 0.0,
-    "remaining_budget": 250.0,
-    "allocations": []
+    "spent": 7444.18,
+    "remaining_budget": 152169.93,
+    "allocations": [
+      {
+        "sku": "Q1-019",
+        "extra_units": 9,
+        "cost": 496.53,
+        "incremental_cash": 7744.5,
+        "benefit_per_real": 15.5972
+      },
+      {
+        "sku": "Q1-022",
+        "extra_units": 9,
+        "cost": 135.81,
+        "incremental_cash": 2024.64,
+        "benefit_per_real": 14.9079
+      },
+      {
+        "sku": "Q1-030",
+        "extra_units": 43,
+        "cost": 675.53,
+        "incremental_cash": 9396.79,
+        "benefit_per_real": 13.9102
+      },
+      {
+        "sku": "Q1-025",
+        "extra_units": 4,
+        "cost": 74.12,
+        "incremental_cash": 937.04,
+        "benefit_per_real": 12.6422
+      },
+      {
+        "sku": "Q1-017",
+        "extra_units": 7,
+        "cost": 82.39,
+        "incremental_cash": 962.99,
+        "benefit_per_real": 11.6882
+      },
+      {
+        "sku": "Q1-006",
+        "extra_units": 11,
+        "cost": 163.9,
+        "incremental_cash": 1798.28,
+        "benefit_per_real": 10.9718
+      },
+      {
+        "sku": "Q1-023",
+        "extra_units": 5,
+        "cost": 123.0,
+        "incremental_cash": 1149.3,
+        "benefit_per_real": 9.3439
+      },
+      {
+        "sku": "Q1-021",
+        "extra_units": 7,
+        "cost": 201.18,
+        "incremental_cash": 1676.01,
+        "benefit_per_real": 8.3309
+      },
+      {
+        "sku": "Q1-003",
+        "extra_units": 5,
+        "cost": 190.9,
+        "incremental_cash": 1459.35,
+        "benefit_per_real": 7.6446
+      },
+      {
+        "sku": "Q1-029",
+        "extra_units": 1,
+        "cost": 113.43,
+        "incremental_cash": 812.97,
+        "benefit_per_real": 7.1672
+      },
+      {
+        "sku": "Q1-013",
+        "extra_units": 32,
+        "cost": 751.04,
+        "incremental_cash": 4395.84,
+        "benefit_per_real": 5.853
+      },
+      {
+        "sku": "Q1-015",
+        "extra_units": 22,
+        "cost": 548.9,
+        "incremental_cash": 2739.22,
+        "benefit_per_real": 4.9904
+      },
+      {
+        "sku": "Q1-002",
+        "extra_units": 1,
+        "cost": 28.95,
+        "incremental_cash": 129.78,
+        "benefit_per_real": 4.4829
+      },
+      {
+        "sku": "Q1-018",
+        "extra_units": 14,
+        "cost": 583.52,
+        "incremental_cash": 2493.96,
+        "benefit_per_real": 4.274
+      },
+      {
+        "sku": "Q1-005",
+        "extra_units": 4,
+        "cost": 418.52,
+        "incremental_cash": 1689.92,
+        "benefit_per_real": 4.0378
+      },
+      {
+        "sku": "Q1-028",
+        "extra_units": 14,
+        "cost": 218.82,
+        "incremental_cash": 771.82,
+        "benefit_per_real": 3.5272
+      },
+      {
+        "sku": "Q1-020",
+        "extra_units": 3,
+        "cost": 201.3,
+        "incremental_cash": 622.23,
+        "benefit_per_real": 3.0911
+      },
+      {
+        "sku": "Q1-012",
+        "extra_units": 4,
+        "cost": 37.68,
+        "incremental_cash": 104.36,
+        "benefit_per_real": 2.7696
+      },
+      {
+        "sku": "Q1-008",
+        "extra_units": 5,
+        "cost": 632.8,
+        "incremental_cash": 1740.05,
+        "benefit_per_real": 2.7498
+      },
+      {
+        "sku": "Q1-009",
+        "extra_units": 6,
+        "cost": 919.32,
+        "incremental_cash": 2155.86,
+        "benefit_per_real": 2.3451
+      },
+      {
+        "sku": "Q1-010",
+        "extra_units": 5,
+        "cost": 411.1,
+        "incremental_cash": 868.1,
+        "benefit_per_real": 2.1117
+      },
+      {
+        "sku": "Q1-016",
+        "extra_units": 2,
+        "cost": 194.36,
+        "incremental_cash": 366.42,
+        "benefit_per_real": 1.8853
+      },
+      {
+        "sku": "Q1-014",
+        "extra_units": 4,
+        "cost": 241.08,
+        "incremental_cash": 349.68,
+        "benefit_per_real": 1.4505
+      }
+    ]
   },
-  "sample_data_notice": "Illustrative sample catalog; replace with official generated inputs.",
-  "seed": 14
+  "financial_summary": {
+    "cash_generated_after_promotion_cost": 737293.2,
+    "margin_percent_of_revenue": 0.2432,
+    "inventory_total": 4609,
+    "inventory_remaining": 1386,
+    "cash_target": 451834.09,
+    "target_attained": true,
+    "target_surplus_or_shortfall": 285459.11,
+    "debt_total": 472624.04,
+    "debt_coverage_ratio": 1.56,
+    "promotion_budget": 159614.11,
+    "promotion_spent": 7444.18
+  },
+  "official_instance": {
+    "group": "G01",
+    "seed_base": 31,
+    "seed_final": 1031,
+    "instance_id": "ec52f3b45b22",
+    "ga_seed": 1132
+  }
 }

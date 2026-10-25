@@ -16,8 +16,12 @@ class QuestionOneTests(unittest.TestCase):
 
     def test_policy_respects_stock_and_margin_floor(self):
         cash, policy = evaluate_policy(self.items[:1], [1.0], 0.05)
-        self.assertEqual(policy[0]["units"], min(18, 35))
-        self.assertEqual(policy[0]["remaining_stock"], 18 - policy[0]["units"])
+        expected_demand = int(self.items[0]["demanda_base_90d"])
+        expected_units = min(self.items[0]["estoque"], expected_demand)
+        self.assertEqual(policy[0]["units"], expected_units)
+        self.assertEqual(
+            policy[0]["remaining_stock"], self.items[0]["estoque"] - expected_units
+        )
         self.assertGreaterEqual(cash, 0)
 
     def test_brute_force_returns_exact_best_policy(self):
