@@ -7,3 +7,10 @@ Este projeto recebeu suporte de ferramentas de IA em pontos específicos do proc
 - validação de casos-limite e checagem de consistência lógica em partes isoladas da solução.
 
 A IA foi utilizada como apoio complementar para documentação, revisão e refinamento de detalhes, e não substituiu a análise técnica, a modelagem do problema, a escolha da abordagem nem a validação final do autor. A responsabilidade pela correta implementação, pela interpretação das diretrizes e pela conclusão do projeto permanece com os autores do trabalho.
+
+## Registro de apoio na documentação da Questão 2
+
+- Ferramenta: OpenAI Codex.
+- Escopo: revisão de `questao_02/main.py` para documentar no README os comandos,
+  parâmetros de seed e cenários, fluxo entre algoritmos e arquivo de resultados.
+- Alterações restritas à documentação, sem mudanças nos algoritmos ou dados oficiais.

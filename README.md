@@ -38,14 +38,39 @@ benchmark/promotion results. The illustrative promotion uplift and cost model
 are documented in `docs/decisoes.md` and still need confirmation against the
 official incentive rules.
 
+## Question 2 run
+
+```bash
+python questao_02/main.py
+```
+
+This question uses three algorithms: Monte Carlo estimates demand and cash,
+Dynamic Programming builds the weekly price policy, and Greedy allocates the
+weekly promotion budget. Independent Monte Carlo scenarios then validate the
+complete plan against the debt payments in weeks 4, 8, and 12.
+
+To set the simulation seed and scenario counts explicitly:
+
+```bash
+python questao_02/main.py --seed 1232 --cenarios 2000 --validacao-cenarios 5000
+```
+
+Construction requires at least 2,000 scenarios; independent validation requires
+at least 5,000. Without `--seed`, the construction seed is the official
+`seed_final + 201` (1232 for G01). Validation uses the construction seed plus
+1,000,003. These options do not modify the official input files.
+
+The command writes `questao_02/resultados/resultado_q2.json` with the weekly
+price policy, promotions, payment probabilities, expected final cash, and P10
+final cash. See `run_q2()` and `main()` in `questao_02/main.py` for the flow and
+output assembly, and `docs/decisoes.md` for model assumptions.
+
 ## Tests
 
 ```bash
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-Question 2 runs with 2,000 construction scenarios and 5,000 independent
-validation scenarios by default. Run it with `python questao_02/main.py`.
 See `docs/decisoes.md` and `docs/complexidade.md` for model assumptions.
 
 ## Official instance status
