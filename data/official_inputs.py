@@ -74,6 +74,11 @@ def validate_official_manifest(data_dir: Path = ROOT) -> dict:
     expected_seed = int(group_digits) * 1000 + int(manifest.get("seed_base", -1))
     if manifest.get("seed_final") != expected_seed:
         raise ValueError("Manifest seed_final does not match group number and seed_base")
+    for question in ("q1", "q2"):
+        if question not in manifest.get("quantidade_skus", {}):
+            raise ValueError(f"Manifest is missing {question} SKU count; run tools/enrich_manifest.py")
+        if question not in manifest.get("metas_financeiras", {}):
+            raise ValueError(f"Manifest is missing {question} financial targets; run tools/enrich_manifest.py")
     return manifest
 
 
@@ -123,3 +128,45 @@ def load_official_inputs(question: str, data_dir: Path = ROOT) -> tuple[list[dic
         if config.get(key) != manifest.get(key):
             raise ValueError(f"{config_path.name} {key} does not match the manifest")
     return catalog, config, manifest
+
+
+def enrich_manifest(data_dir: Path = ROOT) -> dict:
+    """Add deterministic SKU counts and financial targets without editing inputs."""
+    data_dir = Path(data_dir)
+    manifest_path = data_dir / "manifesto_dados.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    hashes = manifest.get("arquivos", {})
+    derived = {}
+    for question in ("q1", "q2"):
+        group = manifest["grupo"]
+        catalog_name = f"{question}_catalogo_{group}.csv"
+        config_name = f"{question}_config_{group}.json"
+        if hashes.get(catalog_name) != _sha256(data_dir / catalog_name):
+            raise ValueError(f"Official catalog hash mismatch: {catalog_name}")
+        if hashes.get(config_name) != _sha256(data_dir / config_name):
+            raise ValueError(f"Official config hash mismatch: {config_name}")
+        with (data_dir / catalog_name).open("r", encoding="utf-8-sig", newline="") as source:
+            sku_count = sum(1 for _ in csv.DictReader(source))
+        config = json.loads((data_dir / config_name).read_text(encoding="utf-8"))
+        if question == "q1":
+            targets = {
+                "meta_caixa_90d": config["meta_caixa_90d"],
+                "divida_total_90d": config["divida_total_90d"],
+            }
+        else:
+            targets = {
+                "caixa_inicial": config["caixa_inicial"],
+                "dividas": config["dividas"],
+            }
+        derived[question] = (sku_count, targets)
+
+    manifest["quantidade_skus"] = {
+        question: values[0] for question, values in derived.items()
+    }
+    manifest["metas_financeiras"] = {
+        question: values[1] for question, values in derived.items()
+    }
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    return manifest

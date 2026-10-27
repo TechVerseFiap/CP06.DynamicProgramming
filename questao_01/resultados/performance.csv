@@ -1,0 +1,13 @@
+algorithm,input_size_skus,scenarios,weeks,price_levels,elapsed_seconds,peak_memory_mib,notes
+Brute Force reference,3,,,7,0.010227,0.0034,cash=19592.86; unoptimized repeated evaluation
+Brute Force optimized,3,,,7,0.00159,0.0133,cash=19592.86; equivalent to reference
+Brute Force reference,4,,,7,0.039549,0.0029,cash=19592.86; unoptimized repeated evaluation
+Brute Force optimized,4,,,7,0.010135,0.0134,cash=19592.86; equivalent to reference
+Brute Force reference,6,,,7,2.985312,0.004,cash=57345.99; unoptimized repeated evaluation
+Brute Force optimized,6,,,7,0.559513,0.0194,cash=57345.99; equivalent to reference
+Genetic Algorithm,3,,,7,0.029218,0.0083,"seed=1132; cash=19592.86; K=30,G=50,mutation=0.1"
+Greedy,3,,,,2.8e-05,0.0003,allocated=2; spend=219.85
+Genetic Algorithm,15,,,7,0.175701,0.0172,"seed=1132; cash=215469.54; K=30,G=50,mutation=0.1"
+Greedy,15,,,,0.000115,0.0014,allocated=11; spend=4329.29
+Genetic Algorithm,30,,,7,0.392958,0.0293,"seed=1132; cash=698348.27; K=30,G=50,mutation=0.1"
+Greedy,30,,,,0.000177,0.0053,allocated=23; spend=7444.18

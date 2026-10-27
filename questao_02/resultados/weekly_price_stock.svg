@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="500.0" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Q2 - Weekly price and stock trajectory (representative SKUs)</text>
+<text x="500" y="52" text-anchor="middle" font-family="Arial" font-size="12">Top panels: price; bottom panels: remaining stock</text>
+<polyline fill="none" stroke="#1769aa" stroke-width="2" points="80.0,85.0 160.9,85.0 241.8,85.0 322.7,85.0 403.6,85.0 484.5,85.0 565.5,85.0 646.4,85.0 727.3,85.0 808.2,85.0 889.1,85.0 970.0,85.0"/>
+<polyline fill="none" stroke="#1769aa" stroke-width="2" points="80.0,355.0 160.9,360.1 241.8,365.1 322.7,370.2 403.6,375.2 484.5,380.2 565.5,385.3 646.4,390.3 727.3,395.4 808.2,400.4 889.1,405.4 970.0,410.5"/>
+<text x="80" y="77" font-family="Arial" font-size="12" fill="#1769aa">Q2-006</text>
+<polyline fill="none" stroke="#e67e22" stroke-width="2" points="80.0,85.0 160.9,85.0 241.8,85.0 322.7,85.0 403.6,85.0 484.5,85.0 565.5,85.0 646.4,85.0 727.3,85.0 808.2,85.0 889.1,85.0 970.0,85.0"/>
+<polyline fill="none" stroke="#e67e22" stroke-width="2" points="80.0,356.6 160.9,363.2 241.8,369.8 322.7,376.4 403.6,383.0 484.5,389.6 565.5,396.2 646.4,402.8 727.3,409.4 808.2,416.0 889.1,422.6 970.0,429.2"/>
+<text x="230" y="77" font-family="Arial" font-size="12" fill="#e67e22">Q2-003</text>
+<polyline fill="none" stroke="#138a5b" stroke-width="2" points="80.0,85.0 160.9,85.0 241.8,85.0 322.7,85.0 403.6,85.0 484.5,85.0 565.5,85.0 646.4,85.0 727.3,85.0 808.2,85.0 889.1,85.0 970.0,85.0"/>
+<polyline fill="none" stroke="#138a5b" stroke-width="2" points="80.0,363.9 160.9,377.8 241.8,391.7 322.7,405.6 403.6,419.4 484.5,433.3 565.5,447.2 646.4,461.1 727.3,475.0 808.2,488.9 889.1,502.8 970.0,516.7"/>
+<text x="380" y="77" font-family="Arial" font-size="12" fill="#138a5b">Q2-002</text>
+<text x="80.0" y="552" text-anchor="middle" font-family="Arial" font-size="10">1</text>
+<text x="160.9" y="552" text-anchor="middle" font-family="Arial" font-size="10">2</text>
+<text x="241.8" y="552" text-anchor="middle" font-family="Arial" font-size="10">3</text>
+<text x="322.7" y="552" text-anchor="middle" font-family="Arial" font-size="10">4</text>
+<text x="403.6" y="552" text-anchor="middle" font-family="Arial" font-size="10">5</text>
+<text x="484.5" y="552" text-anchor="middle" font-family="Arial" font-size="10">6</text>
+<text x="565.5" y="552" text-anchor="middle" font-family="Arial" font-size="10">7</text>
+<text x="646.4" y="552" text-anchor="middle" font-family="Arial" font-size="10">8</text>
+<text x="727.3" y="552" text-anchor="middle" font-family="Arial" font-size="10">9</text>
+<text x="808.2" y="552" text-anchor="middle" font-family="Arial" font-size="10">10</text>
+<text x="889.1" y="552" text-anchor="middle" font-family="Arial" font-size="10">11</text>
+<text x="970.0" y="552" text-anchor="middle" font-family="Arial" font-size="10">12</text>
+<text x="525.0" y="600" text-anchor="middle" font-family="Arial" font-size="12">Week</text>
+</svg>

@@ -11,5 +11,23 @@
     "q2_config_G01.json": "084ed595a020ac78735703acc3458b32b0998594a73ec868742d2da65cc5d7e5"
   },
   "sha256_conjunto": "ec52f3b45b22ad5fe2d5160f6776dd75978b02c007af72177aa5c97792d382a3",
-  "aviso": "Os arquivos originais devem ser preservados. Qualquer alteração modificará o hash."
+  "aviso": "Os arquivos originais devem ser preservados. Qualquer alteração modificará o hash.",
+  "quantidade_skus": {
+    "q1": 30,
+    "q2": 24
+  },
+  "metas_financeiras": {
+    "q1": {
+      "meta_caixa_90d": 451834.09,
+      "divida_total_90d": 472624.04
+    },
+    "q2": {
+      "caixa_inicial": 25510.27,
+      "dividas": {
+        "semana_4": 71491.21,
+        "semana_8": 92342.82,
+        "semana_12": 134046.03
+      }
+    }
+  }
 }

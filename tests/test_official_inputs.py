@@ -15,6 +15,9 @@ class OfficialInputTests(unittest.TestCase):
         self.assertEqual(manifest["seed_base"], 31)
         self.assertEqual(manifest["seed_final"], 1031)
         self.assertEqual(manifest["id_instancia"], "ec52f3b45b22")
+        self.assertEqual(manifest["quantidade_skus"], {"q1": 30, "q2": 24})
+        self.assertIn("meta_caixa_90d", manifest["metas_financeiras"]["q1"])
+        self.assertIn("dividas", manifest["metas_financeiras"]["q2"])
         self.assertEqual(len(load_official_inputs("q1")[0]), 30)
         self.assertEqual(len(load_official_inputs("q2")[0]), 24)
 

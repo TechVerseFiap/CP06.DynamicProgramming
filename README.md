@@ -31,12 +31,11 @@ python -m pip install -r requirements.txt
 python questao_01/main.py
 ```
 
-The command runs the six-SKU Brute Force benchmark, the seeded GA on that
-benchmark and all 30 official SKUs, then passes the GA policy to Greedy. It
-writes `questao_01/resultados/resultado_q1.json` with financial metrics and the
-benchmark/promotion results. The illustrative promotion uplift and cost model
-are documented in `docs/decisoes.md` and still need confirmation against the
-official incentive rules.
+The command runs the six-SKU Brute Force benchmark, compares two seeded GA
+configurations on the official catalog, then passes the selected policy to
+Greedy. It writes financial results and before/after promotion accounting to
+`questao_01/resultados/resultado_q1.json`. Scenario overrides are available;
+run `python questao_01/main.py --help` for options.
 
 ## Tests
 
@@ -44,9 +43,14 @@ official incentive rules.
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-Question 2 runs with 2,000 construction scenarios and 5,000 independent
-validation scenarios by default. Run it with `python questao_02/main.py`.
-See `docs/decisoes.md` and `docs/complexidade.md` for model assumptions.
+Question 2 estimates outcomes with Monte Carlo, compares risk-aware and
+expected-cash DP policies on construction scenarios, then independently
+validates the selected policy (2,000 and 5,000 scenarios by default).
+Run `python questao_02/main.py --help` for scenario overrides. Run
+`python tools/evidence.py` to regenerate CSV/SVG evidence and
+`python tools/benchmark_performance.py` to reproduce performance tables.
+See `docs/decisoes.md`, `docs/complexidade.md`, and `docs/desempenho.md` for
+assumptions and measured results.
 
 ## Official instance status
 

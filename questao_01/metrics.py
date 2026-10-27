@@ -39,3 +39,25 @@ def evaluate_policy(itens, multipliers, margem_minima):
         })
 
     return total_cash, policy
+
+
+def apply_promotions(policy, promotion_plan):
+    """Return the post-Greedy policy, accounting for added sales and spend."""
+    allocations = {
+        entry["sku"]: entry for entry in promotion_plan.get("allocations", [])
+    }
+    post_policy = []
+    for row in policy:
+        updated = dict(row)
+        allocation = allocations.get(row["sku"])
+        extra_units = min(
+            row["remaining_stock"], allocation["extra_units"] if allocation else 0
+        )
+        spend = allocation["cost"] if allocation else 0.0
+        updated["units"] += extra_units
+        updated["remaining_stock"] -= extra_units
+        updated["cash"] = round(row["cash"] + extra_units * row["unit_margin"] - spend, 2)
+        updated["promotional_units"] = extra_units
+        updated["promotional_spend"] = round(spend, 2)
+        post_policy.append(updated)
+    return post_policy

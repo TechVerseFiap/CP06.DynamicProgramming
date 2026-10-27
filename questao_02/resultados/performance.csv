@@ -1,0 +1,13 @@
+algorithm,input_size_skus,scenarios,weeks,price_levels,elapsed_seconds,peak_memory_mib,notes
+Monte Carlo estimation,3,2000,12,6,7.406001,0.5658,seed=1232; instance=ec52f3b45b22
+Risk-aware DP,3,,12,6,45.551182,1.9369,objective=0.028062
+Greedy,3,,12,,0.000167,0.0028,campaigns=3
+Monte Carlo validation,3,5000,12,,1.52571,0.3441,independent seed=1001235
+Monte Carlo estimation,12,2000,12,6,27.894347,1.3576,seed=1232; instance=ec52f3b45b22
+Risk-aware DP,12,,12,6,105.655469,3.77,objective=0.218744
+Greedy,12,,12,,0.000248,0.0012,campaigns=21
+Monte Carlo validation,12,5000,12,,11.06426,0.7009,independent seed=1001235
+Monte Carlo estimation,24,2000,12,6,56.008272,2.5441,seed=1232; instance=ec52f3b45b22
+Risk-aware DP,24,,12,6,184.524725,6.687,objective=0.959084
+Greedy,24,,12,,0.000933,0.0066,campaigns=72
+Monte Carlo validation,24,5000,12,,27.663527,1.4262,independent seed=1001235

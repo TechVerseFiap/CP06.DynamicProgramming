@@ -1,0 +1,3 @@
+configuration,population_size,generations,mutation_rate,cash,elapsed_seconds,peak_memory_mib,instance_id
+baseline,30,50,0.1,698348.27,0.399735,0.0304,ec52f3b45b22
+exploration,60,100,0.2,696741.62,1.730952,0.0562,ec52f3b45b22

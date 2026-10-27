@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440">
+<defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="500.0" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Checkpoint 6 - Integrated algorithm flows</text>
+<rect x="35" y="105" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="137" y="137" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Q1 official catalog/config</text>
+<text x="137" y="161" text-anchor="middle" font-family="Arial" font-size="11">SHA-256 validated</text>
+<rect x="275" y="105" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="377" y="137" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Brute Force</text>
+<text x="377" y="161" text-anchor="middle" font-family="Arial" font-size="11">6-SKU exact benchmark</text>
+<rect x="515" y="105" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="617" y="137" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Genetic Algorithm</text>
+<text x="617" y="161" text-anchor="middle" font-family="Arial" font-size="11">reduced + full catalog</text>
+<rect x="755" y="105" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="857" y="137" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Greedy</text>
+<text x="857" y="161" text-anchor="middle" font-family="Arial" font-size="11">promo policy + accounting</text>
+<rect x="35" y="285" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="137" y="317" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Q2 official catalog/config</text>
+<text x="137" y="341" text-anchor="middle" font-family="Arial" font-size="11">SHA-256 validated</text>
+<rect x="275" y="285" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="377" y="317" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Monte Carlo</text>
+<text x="377" y="341" text-anchor="middle" font-family="Arial" font-size="11">price estimates / scenarios</text>
+<rect x="515" y="285" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="617" y="317" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Risk-aware DP</text>
+<text x="617" y="341" text-anchor="middle" font-family="Arial" font-size="11">week + stock + cash bucket</text>
+<rect x="755" y="285" width="205" height="80" rx="8" fill="#eaf2f8" stroke="#1769aa" stroke-width="2"/>
+<text x="857" y="317" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Greedy + validation</text>
+<text x="857" y="341" text-anchor="middle" font-family="Arial" font-size="11">weekly promos / independent MC</text>
+<line x1="240" y1="145" x2="275" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="480" y1="145" x2="515" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="720" y1="145" x2="755" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="240" y1="325" x2="275" y2="325" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="480" y1="325" x2="515" y2="325" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="720" y1="325" x2="755" y2="325" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

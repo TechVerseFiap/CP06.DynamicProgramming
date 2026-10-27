@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import unittest
 
-from questao_02.dynamic_programming import dynamic_programming_catalog_q2
+from questao_02.dynamic_programming import (
+    dynamic_programming_catalog_q2,
+    risk_aware_dynamic_programming_q2,
+)
 from questao_02.greedy import greedy_q2
 from questao_02.main import run_q2
 from questao_02.monte_carlo import monte_carlo_q2, validate_q2_policy
@@ -59,6 +62,25 @@ class QuestionTwoTests(unittest.TestCase):
         self.assertEqual(result["construction_scenarios"], 20)
         self.assertEqual(result["validation"]["validation_seed"], 1_000_015)
         self.assertEqual(len(result["weekly_policy"]), 4)
+        self.assertGreaterEqual(result["risk_aware_dp"]["expected_on_time_debt_fraction"], 0)
+        self.assertLessEqual(result["risk_aware_dp"]["expected_on_time_debt_fraction"], 1)
+
+    def test_risk_dp_returns_contingent_week_stock_cash_policy(self):
+        estimates = monte_carlo_q2(self.items, self.prices, scenarios=20, seed=6, weeks=4)
+        plan = risk_aware_dynamic_programming_q2(
+            self.items, estimates, self.prices, {2: 100.0, 4: 200.0},
+            initial_cash=25.0, weeks=4,
+        )
+        self.assertEqual(len(plan["weekly_policy"]), 4)
+        self.assertIn("T1", plan["state_policy"]["actions"])
+        policy = plan["weekly_policy"]
+        promos = greedy_q2(self.items, policy, budget_per_week=20.0)
+        result = validate_q2_policy(
+            self.items, policy, promos, {2: 100.0, 4: 200.0},
+            scenarios=25, seed=5008, initial_cash=25.0,
+            state_policy=plan["state_policy"],
+        )
+        self.assertEqual(result["scenarios"], 25)
 
     def test_monte_carlo_rejects_nonpositive_scenario_count(self):
         with self.assertRaises(ValueError):
